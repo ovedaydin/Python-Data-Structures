@@ -111,3 +111,18 @@ z = [200, 200]​​​​​​​
 my_fun(200)
 
 
+## Stack Memory
+
+```python
+def func():
+		
+	# All these variables get memory
+	# allocated on stack
+	a = 20
+	b = []
+	c = ""
+  
+```
+
+
+
