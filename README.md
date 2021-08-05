@@ -76,3 +76,38 @@ Objects and instance variables are created in Heap memory. As soon as the variab
 It is important to note that the Python memory manager doesn’t necessarily release the memory back to the Operating System, instead memory is returned back to the python interpreter. Python has a small objects allocator that keeps memory allocated for further use. In long-running processes, you may have an incremental reserve of unused memory.
 
 
+
+
+
+
+
+
+
+Python uses the Dynamic Memory Allocation (DMA)
+
+which is internally managed by the Heap data structure. All python objects are stored in a private heap, and this heap is managed in such a way that you have zero control over it. Let us get some more details about DMA and compare it with SMA –
+
+“Garbage Collection”
+
+
+## References
+
+Below are some cases, when the reference of a python object (new/existing PyObject) is made, and ref-count is increased by 1 –​​​​​​​​​​​​
+
+· Binding a new object to a name:
+
+x = 200
+
+· Re-using an already available object and giving a new reference:
+
+y = 200
+
+· Adding an object to a container:
+
+z = [200, 200]​​​​​​​
+
+· Passing it to a function:
+
+my_fun(200)
+
+
